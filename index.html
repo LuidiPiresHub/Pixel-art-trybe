@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelArt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Paleta de Cores</h1>
+    </header>
+    <section id="color-palette">
+        <div id="black" class="color"></div>
+        <div id="red" class="color newColor"></div>
+        <div id="blue" class="color newColor"></div>
+        <div id="green" class="color newColor"></div>
+    </section>
+    <section>
+        <div id="Buttons-Conteiner">
+            <div class="Button">
+                <button id="clear-board">Limpar</button>
+            </div>
+            <div class="Button">
+                <input type="number" name="BoxSize" id="board-size" min="5" max="50">
+            </div>
+            <div class="Button">
+                <button id="generate-board" class="Button">VQV</button>
+            </div>
+            <div class="Button">
+                <button id="Borracha">Borracha</button>
+            </div>
+        </div>
+    </section>
+    <main id="pixelBoxBorder">
+        <div id="pixel-board">
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

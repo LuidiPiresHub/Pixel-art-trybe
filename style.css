@@ -1,0 +1,73 @@
+#title {
+    text-align: center;
+    color: white;
+}
+
+#color-palette {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.color {
+    text-align: center;
+    border: 1px solid black;
+    display: inline;
+    padding: 30px 40px;
+    margin: 5px;
+    border-radius: 10%;
+}
+
+#black {
+    background-color: black;
+}
+
+#red {
+    background-color: red;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
+
+#pixelBoxBorder {
+    text-align: center;
+    border: 1px solid black;
+    height: auto;
+    text-align: center;
+}
+
+.pixel {
+    border: 1px solid black;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0px;
+    margin-bottom: -4px;
+}
+
+body {
+    background-image: url('/Background.gif');
+    background-position: center -20px;
+    background-size: 1680px;
+}
+
+#Buttons-Conteiner {
+    /* border: 5px solid red; */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Button {
+    /* border: 5px solid green; */
+    display: inline;
+    margin: 1px;
+}
+
+#Borracha {
+    background-color: white;
+}
