@@ -11,32 +11,17 @@
 
 .color {
     text-align: center;
-    border: 1px solid black;
+    border: 2px solid black;
     display: inline;
     padding: 30px 40px;
     margin: 5px;
     border-radius: 10%;
 }
 
-#black {
-    background-color: black;
-}
-
-#red {
-    background-color: red;
-}
-
-#blue {
-    background-color: blue;
-}
-
-#green {
-    background-color: green;
-}
-
 #pixelBoxBorder {
     text-align: center;
     border: 1px solid black;
+    /* border: 1px red solid; */
     height: auto;
     text-align: center;
 }
@@ -47,7 +32,7 @@
     height: 40px;
     width: 40px;
     margin: 0px;
-    margin-bottom: -4px;
+    margin-bottom: -6px;
 }
 
 body {
@@ -65,9 +50,22 @@ body {
 .Button {
     /* border: 5px solid green; */
     display: inline;
-    margin: 1px;
+    padding: 5px;
 }
 
 #Borracha {
     background-color: white;
+}
+
+.selected {
+    padding: 35px 45px;
+    border: 3px solid white;
+}
+
+#board-size {
+    width: 100px;
+}
+
+input::placeholder {
+    color: white;
 }
