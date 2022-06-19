@@ -2,7 +2,7 @@ let pixelBox = document.querySelector('#pixel-board');
 let tamanhoCaixa = document.querySelector('#pixelBoxBorder');
 
 function createBox(value) {
-    tamanhoCaixa.style.width = (value * 40.398) + 'px';
+    tamanhoCaixa.style.width = (value * 39.4) + 'px';
     for (let i = 0; i < value; i += 1) {
         for (let i2 = 0; i2 < value; i2 += 1) {
             let div = document.createElement('div');
@@ -12,18 +12,19 @@ function createBox(value) {
         };
     };
 };
+console.log(tamanhoCaixa.style.width.value);
 
 createBox(5);
 
-function selectedClassBlackColor() {
-    let cores = document.querySelectorAll('.color');
-    for (let i = 0; i < cores.length; i += 1) {
-        if (i === 0) {
-            cores[0].className += ' selected';
-        };
-    };
-};
-selectedClassBlackColor();
+// function selectedClassBlackColor() {
+//     let cores = document.querySelectorAll('.color');
+//     for (let i = 0; i < cores.length; i += 1) {
+//         if (i === 0) {
+//             cores[0].className += ' selected';
+//         };
+//     };
+// };
+// selectedClassBlackColor();
 
 function SelectedClassColorPalette() {
     let paletteColor = document.querySelectorAll('.color');
