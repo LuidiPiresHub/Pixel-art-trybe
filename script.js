@@ -104,6 +104,7 @@ function VQVButton() {
             boxSize();
         } else {
             alert('Board inválido!')
+            alert('Tamanho redefinido')
             removeBox();
             createBox(5);
         }
