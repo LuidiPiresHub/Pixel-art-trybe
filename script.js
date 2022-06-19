@@ -58,7 +58,7 @@ putColorInPixels();
 
 function clearButton() {
     let button = document.querySelector('#clear-board');
-    button.addEventListener('mousedown', function () {
+    button.addEventListener('click', function () {
         let pixels = document.querySelectorAll('.pixel');
         for (let pixel of pixels) {
             pixel.style.backgroundColor = 'white';
