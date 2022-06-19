@@ -12,7 +12,6 @@ function createBox(value) {
         };
     };
 };
-console.log(tamanhoCaixa.style.width.value);
 
 createBox(5);
 
@@ -43,34 +42,23 @@ SelectedClassColorPalette();
 
 function putColorInPixels() {
     let pixels = document.querySelectorAll('.pixel');
-
     for (let pixel of pixels) {
         pixel.addEventListener('click', function () {
             let color = document.querySelector('.selected');
-            let whatColor = window.getComputedStyle((color)).backgroundColor;
-            pixel.style.backgroundColor = whatColor;
+            if (color.className === 'btn btn-warning selected') {
+                pixel.style.backgroundColor = 'white'
+            } else {
+                let whatColor = window.getComputedStyle((color)).backgroundColor;
+                pixel.style.backgroundColor = whatColor;
+            }
         });
     };
 };
 putColorInPixels();
 
-function DragClick() {
-    let pixels = document.querySelectorAll('.pixel');
-
-    for (let pixel of pixels) {
-        pixel.addEventListener('dragenter', function () {
-            let color = document.querySelector('.selected');
-            let whatColor = window.getComputedStyle((color)).backgroundColor;
-            pixel.style.backgroundColor = whatColor;
-        });
-    };
-}
-DragClick();
-
-
 function clearButton() {
     let button = document.querySelector('#clear-board');
-    button.addEventListener('click', function () {
+    button.addEventListener('mousedown', function () {
         let pixels = document.querySelectorAll('.pixel');
         for (let pixel of pixels) {
             pixel.style.backgroundColor = 'white';
@@ -146,9 +134,9 @@ function borracha() {
         let selecionado = document.querySelectorAll('.color');
         for (let cor of selecionado) {
             cor.classList.remove('selected');
-            borrachaButton.className = 'selected'
-            borrachaButton.style.border = 'black 1px solid'
-            borrachaButton.style.padding = '1.5px 6px'
+            borrachaButton.classList.remove('selected');
+            borrachaButton.className += ' selected'
+            borrachaButton.style.padding = '6px 12px'
         }
     })
 }
@@ -168,17 +156,13 @@ function ONOFF() {
 
 let button = document.querySelector('#GridRemover');
 function removeGrid() {
-    let pixelBoxBorder = document.querySelector('#pixelBoxBorder');
     let pixels = document.querySelectorAll('.pixel');
-    pixelBoxBorder.style.border = '0px'
     for (let pixel of pixels) {
         pixel.style.border = '0px'
     }
 }
 function addGrid() {
-    let pixelBoxBorder = document.querySelector('#pixelBoxBorder');
     let pixels = document.querySelectorAll('.pixel');
-    pixelBoxBorder.style.border = '1px solid black'
     for (let pixel of pixels) {
         pixel.style.border = '1px solid black'
     }
