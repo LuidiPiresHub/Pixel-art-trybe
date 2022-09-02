@@ -1,53 +1,7 @@
-#title {
-    text-align: center;
-    color: white;
-}
-
-#color-palette {
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 40px;
-}
-
-.color {
-    text-align: center;
-    border: 1px solid black;
-    display: inline;
-    padding: 30px 40px;
-    margin: 5px;
-    border-radius: 10%;
-}
-
-#black {
-    background-color: black;
-}
-
-#red {
-    background-color: red;
-}
-
-#blue {
-    background-color: blue;
-}
-
-#green {
-    background-color: green;
-}
-
-#pixelBoxBorder {
-    text-align: center;
-    border: 1px solid black;
-    height: auto;
-    text-align: center;
-}
-
-.pixel {
-    border: 1px solid black;
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    margin: 0px;
-    margin-bottom: -4px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -56,18 +10,72 @@ body {
     background-size: 1680px;
 }
 
-#Buttons-Conteiner {
-    /* border: 5px solid red; */
-    margin-bottom: 20px;
-    text-align: center;
+header {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-.Button {
-    /* border: 5px solid green; */
-    display: inline;
-    margin: 1px;
+#collorPalletContainer {
+    display: flex;
+    justify-content: center;
 }
 
-#Borracha {
-    background-color: white;
+.colorPallet {
+    height: 100px;
+    width: 100px;
+    margin: 20px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transform: 100ms;
+}
+
+.colorPallet:hover {
+    transition: 100ms;
+    border: 2px solid whitesmoke;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    color: white;
+    margin: 0 10px;
+    width: 140px;
+}
+
+.buttons::placeholder {
+    color: white;
+}
+
+.buttons:nth-child(4) {
+    color: black;
+}
+
+.buttons:nth-child(5) {
+    color: black;
+}
+
+.selected {
+    border: 2px solid whitesmoke;
+}
+
+#pixelsContainer {
+    --size: 4;
+    height: 650px;
+    display: grid;
+    grid-template-columns: repeat(var(--size), 1fr);
+    grid-template-rows: repeat(var(--size), 1fr);
+    gap: 3px;
+    margin: 30px auto;
+    width: 650px;
+}
+
+.pixel {
+    border: 1px solid black;
+    margin: -3px -3px;
 }

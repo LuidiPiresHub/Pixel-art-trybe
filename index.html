@@ -1,45 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelArt</title>
+    <title>Pixels Art</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script defer src="./script.js"></script>
 </head>
-
 <body>
     <header>
-        <h1 id="title">Paleta de Cores</h1>
+        <h1>Paleta de Cores</h1>
     </header>
-    <section id="color-palette">
-        <div id="black" class="color"></div>
-        <div id="red" class="color newColor"></div>
-        <div id="blue" class="color newColor"></div>
-        <div id="green" class="color newColor"></div>
+    <section id="collorPalletContainer">
+        <div id="firstColor" class="colorPallet"></div>
+        <div class="colorPallet"></div>
+        <div class="colorPallet"></div>
+        <div class="colorPallet"></div>
     </section>
-    <section>
-        <div id="Buttons-Conteiner">
-            <div class="Button">
-                <button id="clear-board">Limpar</button>
-            </div>
-            <div class="Button">
-                <input type="number" name="BoxSize" id="board-size" min="5" max="50">
-            </div>
-            <div class="Button">
-                <button id="generate-board" class="Button">VQV</button>
-            </div>
-            <div class="Button">
-                <button id="Borracha">Borracha</button>
-            </div>
-        </div>
+    <section class="buttonsContainer">
+        <button type="button" id="clearAll" class="btn btn-danger buttons">Limpar Tudo</button>
+        <input type="number" placeholder="Número" id="inputValue" class="btn btn-primary buttons" min="5" max="50">
+        <button type="button" id="confirmButton" class="btn btn-success buttons">Confirmar</button>
+        <button type="button" id='eraseButton' class="btn btn-warning buttons">Borracha</button>
+        <button type="button" id="gridButton" class="btn btn-info buttons">Grade ON / OFF</button>
     </section>
-    <main id="pixelBoxBorder">
-        <div id="pixel-board">
-        </div>
+    <main id="pixelsContainer">
     </main>
-    <script src="./script.js"></script>
 </body>
-
 </html>
